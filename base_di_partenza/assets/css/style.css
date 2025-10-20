@@ -232,28 +232,6 @@ aside div p:last-child {
   text-align: right;
 }
 
-/* Desktop: articoli correlati uno di fianco all'altro con titolo centrato sopra */
-@media (min-width: 1200px) {
-  aside {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-  }
-  aside h2 {
-    text-align: center;
-    margin-bottom: 1em;
-    width: 100%;
-  }
-  .aside-articles {
-    display: flex;
-    width: 100%;
-  }
-  .aside-articles > div {
-    width: 32%;
-    margin-bottom: 0;
-  }
-}
-
 /* FOOTER */
 footer {
   background: rgb(53, 53, 53);
@@ -324,5 +302,60 @@ footer a {
     min-width: 110px;
     font-size: 1.2rem;
     border-radius: 3px;
+  }
+}
+
+/* Desktop: articoli correlati uno di fianco all'altro, titolo centrato sopra */
+@media (min-width: 1200px) {
+  aside {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  aside h2 {
+    text-align: center;
+    margin-bottom: 1em;
+    width: 100%;
+    font-size: 2.4rem;
+    font-weight: bold;
+    letter-spacing: -0.02em;
+  }
+  aside > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 33.3333%;
+    margin-bottom: 0;
+    margin-right: 0;
+    border-right: 1px solid #c3c3c3;
+    border-bottom: none;
+  }
+  aside > div:last-child {
+    border-right: none;
+  }
+  /* Raggruppa i div in una riga */
+  aside {
+    flex-direction: column;
+  }
+  aside > div {
+    float: left;
+  }
+  aside > div {
+    min-height: 120px;
+  }
+  aside > div {
+    box-sizing: border-box;
+  }
+  aside > div {
+    margin-right: 0;
+  }
+  /* Contenitore per i div */
+  aside {
+    display: block;
+    overflow: hidden;
+  }
+  aside > div {
+    float: left;
+    width: 33.3333%;
   }
 }
