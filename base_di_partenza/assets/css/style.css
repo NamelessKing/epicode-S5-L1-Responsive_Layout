@@ -243,6 +243,18 @@ tbody tr:last-of-type {
   }
 }
 
+/* Medium viewport: tabella centrata */
+@media (min-width: 768px) and (max-width: 1199px) {
+  article table {
+    width: 80%;
+    margin: 0 auto 2em;
+  }
+  article caption {
+    text-align: center;
+    padding-bottom: 0.5rem;
+  }
+}
+
 /* FORM */
 input {
   padding: 5px;
